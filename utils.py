@@ -583,7 +583,7 @@ def epoch_mix(mode, trainloader, net, optimizer, criterion, criterion1, num_clas
 
                 cvarloss_mid = average + max_element
          
-                loss_CVaR = loss1 + (cvarloss_mid - loss1).detach()
+                loss_CVaR = loss1 + (cvarloss_mid - loss1)
             
                 loss_last = loss_CVaR + loss1
 
